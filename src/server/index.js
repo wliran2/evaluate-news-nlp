@@ -6,6 +6,7 @@ const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
 var aylien = require("aylien_textapi");
 
+//concest the API with the dotenv 
 var textapi = new aylien({
     application_id: process.env.API_ID,
     application_key: process.env.API_KEY
