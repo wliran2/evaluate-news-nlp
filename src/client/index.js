@@ -8,7 +8,6 @@ import './styles/form.scss'
 import './styles/header.scss'
 
 
-
 console.log(checkForName);
 
 alert("I EXIST")
