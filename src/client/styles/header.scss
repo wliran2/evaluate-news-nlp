@@ -1,5 +1,20 @@
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     padding: 10px 40px;
+}
+
+.logo {
+    border-image: black;
+}
+
+.title {
+    display: flex;
+    background-color: rgb(86, 117, 86);
+    justify-content: center;
+    padding: 30px;
+    font-size: xx-large;
+    font-style: normal;
+    font-family: cursive;
+    color: aliceblue;
 }
