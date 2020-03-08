@@ -12,12 +12,13 @@ var textapi = new aylien({
     application_key: process.env.API_KEY
 });
 textapi.sentiment({
-    'text': 'John is a very good football player!'
-}, function(error, response) {
-    if (error === null) {
-        console.log(response);
-    }
-});
+        text: 'John is a very good football player!',
+    },
+    function(error, response) {
+        if (error === null) {
+            console.log(response);
+        }
+    });
 
 const app = express()
 
