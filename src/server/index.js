@@ -5,6 +5,7 @@ var path = require('path')
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
 var aylien = require("aylien_textapi");
+let baseURL = 'https://api.aylien.com/api/v1/sentiment?language=en&mode=tweet&input='
 
 //concest the API with the dotenv 
 var textapi = new aylien({
@@ -40,7 +41,7 @@ function listening() {
 };
 
 //GET route
-app.get('/test', getData);
+app.get('/all', getData);
 
 function getData(req, res) {
     res.send(mockAPIResponse)
