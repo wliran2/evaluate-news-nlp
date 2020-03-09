@@ -12,7 +12,7 @@ var textapi = new aylien({
     application_key: process.env.API_KEY
 });
 textapi.sentiment({
-        text: 'John is a very good football player!',
+        url: 'https://www.bbc.com/sport/tennis',
     },
     function(error, response) {
         if (error === null) {
@@ -31,10 +31,17 @@ app.get('/', function(req, res) {
 })
 
 // designates what port the app will listen to for incoming requests
-app.listen(8080, function() {
-    console.log('Example app listening on port 8080!')
-})
+const port = 8080;
+const server = app.listen(port, listening);
 
-app.get('/test', function(req, res) {
+function listening() {
+    console.log('Example app is listening!!!');
+    console.log(`running on localhost: ${port}`);
+};
+
+//GET route
+app.get('/test', getData);
+
+function getData(req, res) {
     res.send(mockAPIResponse)
-})
+}
