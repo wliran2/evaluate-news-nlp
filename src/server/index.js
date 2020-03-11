@@ -5,6 +5,7 @@ var path = require('path')
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
 var aylien = require("aylien_textapi");
+var bodyParser = require('webpack-body-parser')
 let baseURL = 'https://api.aylien.com/api/v1/sentiment?language=en&mode=tweet&input='
 
 //concest the API with the dotenv 
@@ -23,6 +24,11 @@ textapi.sentiment({
 
 const app = express()
 
+//Here we are configuring express to use body-parser as middle-ware.
+var bodyParser = require('webpack-body-parser')
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 app.use(express.static('dist'))
 
 console.log(__dirname)
@@ -32,7 +38,7 @@ app.get('/', function(req, res) {
 })
 
 // designates what port the app will listen to for incoming requests
-const port = 8080;
+const port = 8081;
 const server = app.listen(port, listening);
 
 function listening() {
@@ -41,18 +47,20 @@ function listening() {
 };
 
 //GET route
-app.get('/all', getData);
+app.get('/', getData);
 
 function getData(req, res) {
     res.send(mockAPIResponse)
 }
-
-app.post('/check', check);
+// POST from site
+app.post('/', check);
 
 function check(req, res) {
     newEntry = {
         url: req.body.url,
     }
+    console.log(url)
+    console.log(res)
     res.send(mockAPIResponse)
     console.log(newEntry)
 }
