@@ -46,3 +46,13 @@ app.get('/all', getData);
 function getData(req, res) {
     res.send(mockAPIResponse)
 }
+
+app.post('/check', check);
+
+function check(req, res) {
+    newEntry = {
+        url: req.body.url,
+    }
+    res.send(mockAPIResponse)
+    console.log(newEntry)
+}
