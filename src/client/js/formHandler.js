@@ -4,9 +4,9 @@ function handleSubmit(event) {
     // check what text was put into the form field
     const formText = document.getElementById('name').value
     Client.checkForName(formText)
-    console.log("::: Form Submitted :::")
+    console.log("::: Text was Submitted :::" + formText)
 
-    fetch('http://localhost:8080/', {
+    fetch('http://localhost:8080/checkurl', {
             method: 'POST',
             credentials: 'same-origin',
             headers: {
@@ -16,7 +16,8 @@ function handleSubmit(event) {
         })
         .then(res => res.json())
         .then(function(res) {
-            document.getElementById('results').innerHTML = res.message
+            console.log("response:" + res.polarity_confidence);
+            document.getElementById('results').innerHTML = res.polarity_confidence;
         })
 }
 
