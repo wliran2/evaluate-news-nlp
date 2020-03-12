@@ -19,9 +19,12 @@ function handleSubmit(event) {
         .then(function(jsonresults) {
             document.getElementById('results').innerHTML = jsonresults.text;
             document.getElementById('polarity').innerHTML = jsonresults.polarity;
-            document.getElementById('polarity_confidence').innerHTML = (jsonresults.polarity_confidence) * 100;
+            document.getElementById('polarity_confidence').innerHTML = (jsonresults.polarity_confidence.toFixed(2)) * 100;
+            document.getElementById('subjectivity_confidence').innerHTML = (jsonresults.subjectivity_confidence.toFixed(2)) * 100;
+
         })
 
 }
+
 
 export { handleSubmit }
