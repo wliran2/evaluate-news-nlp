@@ -3,8 +3,14 @@ function handleSubmit(event) {
 
     // check what text was put into the form field
     const formText = document.getElementById('name').value
-    Client.checkForName(formText)
-    console.log("::: Text was Submitted :::" + formText)
+    if (document.getElementById('name').value === '') {
+        alert('the URL is empty - you have to Enter a Valid URL');
+        console.log('an empty URL was submited')
+    } else {
+        document.getElementById("button").disabled = false;
+        Client.checktheURL(formText)
+    }
+
 
     fetch('http://localhost:8080/checkurl', {
         method: 'POST',
