@@ -3,7 +3,8 @@ function handleSubmit(event) {
         // check what text was put into the form field
     const formText = document.getElementById('name').value
     if (document.getElementById('name').value === '') {
-        alert('the URL is empty - you have to Enter a Valid URL');
+        const errorMsg = "the URL is empty - you have to Enter a Valid URL";
+        document.getElementById("err").innerHTML = errorMsg
         console.log('an empty URL was submited')
     } else {
         Client.checktheURL(formText)

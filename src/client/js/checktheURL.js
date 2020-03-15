@@ -4,11 +4,11 @@ function checktheURL(inputText) {
         console.log("Running checkForName URL is Valid --  " + inputText);
     } else {
         const errorMsg = "URL is not valid please enter a Valid URL";
-        alert(errorMsg);
-        return errorMsg;
-
+        document.getElementById("err").innerHTML = errorMsg
+            //return errorMsg;
     }
 
 }
-//module.exports = checktheURL;
-export { checktheURL }
+
+export { checktheURL }; // i need this for the project
+//module.exports = checktheURL; //i need it for the unit-tests
