@@ -1,8 +1,8 @@
 function handleSubmit(event) {
     event.preventDefault()
-        // check what text was put into the form field
-    const formText = document.getElementById('name').value;
+    const formText = document.getElementById('url').value;
     const errormessage = Client.checktheURL(formText)
+    document.getElementById("err").innerHTML = '';
     if (errormessage) {
         document.getElementById("err").innerHTML = errormessage
         return
