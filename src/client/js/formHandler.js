@@ -1,13 +1,11 @@
 function handleSubmit(event) {
     event.preventDefault()
         // check what text was put into the form field
-    const formText = document.getElementById('name').value
-    if (document.getElementById('name').value === '') {
-        const errorMsg = "the URL is empty - you have to Enter a Valid URL";
-        document.getElementById("err").innerHTML = errorMsg
-        console.log('an empty URL was submited')
-    } else {
-        Client.checktheURL(formText)
+    const formText = document.getElementById('name').value;
+    const errormessage = Client.checktheURL(formText)
+    if (errormessage) {
+        document.getElementById("err").innerHTML = errormessage
+        return
     }
 
     fetch('http://localhost:8080/checkurl', {
