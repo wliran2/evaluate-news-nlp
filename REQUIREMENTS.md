@@ -2,22 +2,22 @@
 
 ### Your project must:
 
-- [ ] Be set up with Webpack, Express, Node, and Sass, and Service Workers
+- [V] Be set up with Webpack, Express, Node, and Sass, and Service Workers(not works)
 
-- [ ] Have separate dev and prod configurations for Webpack
+- [V] Have separate dev and prod configurations for Webpack
 
-- [ ] Have the developer environment set up with the Webpack dev server
+- [V] Have the developer environment set up with the Webpack dev server
 
-- [ ] Have a minimum of one form field
+- [V] Have a minimum of one form field
 
-- [ ] Make one request to the Aylien API
+- [V] Make one request to the Aylien API
 
-- [ ] Use Sass for styling
+- [V] Use Sass for styling
 
-- [ ] Minify js and styles in the production environment
+- [V] Minify js and styles in the production environment
 
-- [ ] Response from the API must be added to the view for a user to see 
+- [V] Response from the API must be added to the view for a user to see 
 
-- [ ] Be able to show content offline
+- [X] Be able to show content offline
 
 All of these requirements are explained throughout the course. Specifics on setting up the Aylien API are found in the README file of this repo.
