@@ -12,5 +12,4 @@ function checktheURL(inputText) {
     }
 }
 
-export { checktheURL }; // i need this for the project
-//module.exports = checktheURL; //i need it for the unit-tests
+export { checktheURL };

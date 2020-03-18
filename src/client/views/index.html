@@ -2,8 +2,10 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <meta charset="utf-8">
-    <title>Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NLP</title>
 </head>
 
 <body>
@@ -15,39 +17,39 @@
             please enter the URL that you would like to check:
         </div>
     </header>
+
     <main>
 
         <section>
-
             <form class="" onsubmit="return handleSubmit(event)">
                 <div id="err"></div>
                 <br>
                 <input id="url" type="text" name="input" value="" placeholder="Please Enter a URL">
                 <input type="submit" id="button" name="button" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
-
             </form>
+        </section>
 
-            <section>
-                <section class="fromAPI">
-                    <div id="output"><u>Output:</u></div>
-                    <br>
-                    <strong id="res1">Results from URL:</strong>
-                    <div id="results"></div>
-                    <br>
-                    <strong id="pol1">Polarity:</strong>
-                    <div id="polarity"></div>
-                    <br>
-                    <strong id="pol_c">Polarity Confidence:</strong>
-                    <div id="polarity_confidence"></div>
-                    <br>
-                    <strong id="sub_c">Subjectivity Confidence:</strong>
-                    <div id="subjectivity_confidence"></div>
-                </section>
+        <section class="fromAPI">
+            <div id="output"><u>Output:</u></div>
+            <br>
+            <strong id="res1">Results from URL:</strong>
+            <div id="results"></div>
+            <br>
+            <strong id="pol1">Polarity:</strong>
+            <div id="polarity"></div>
+            <br>
+            <strong id="pol_c">Polarity Confidence:</strong>
+            <div id="polarity_confidence"></div>
+            <br>
+            <strong id="sub_c">Subjectivity Confidence:</strong>
+            <div id="subjectivity_confidence"></div>
+        </section>
+
     </main>
+
     <footer>
         <p>Liran weisbord - project num# 4</p>
     </footer>
-
     <script>
         //Check that service workers are supported
         if ('serviceWorker' in navigator) {

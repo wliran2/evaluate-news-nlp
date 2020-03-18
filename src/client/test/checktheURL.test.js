@@ -1,4 +1,4 @@
-const checktheURL = require('../js/checktheURL');
+const { checktheURL } = require('../js/checktheURL');
 
 test('check that the URL is Valid', () => {
     expect(checktheURL('https://www.bbc.com/sport/golf')).toBe("");

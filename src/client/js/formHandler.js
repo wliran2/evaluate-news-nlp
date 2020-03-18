@@ -25,9 +25,7 @@ function handleSubmit(event) {
             document.getElementById('subjectivity_confidence').innerHTML = (jsonresults.subjectivity_confidence.toFixed(2)) * 100;
 
         })
-        .else(error)(
-            error.status
-        )
+
 
 }
 export { handleSubmit }
