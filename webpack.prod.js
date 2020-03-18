@@ -4,8 +4,13 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
-    entry: './src/client/index.js',
     mode: 'production',
+    devtool: 'source-map',
+    entry: './src/client/index.js',
+    output: {
+        libraryTarget: 'var',
+        library: 'Client'
+    },
     module: {
         rules: [{
                 test: /\.js$/,
@@ -26,13 +31,10 @@ module.exports = {
         new HtmlWebPackPlugin({
             template: './src/client/views/index.html',
             filename: './index.html',
-
         }),
-
         new WorkboxPlugin.GenerateSW({
-            clientsClaim: true,
-            skipWaiting: true,
+            // clientsClaim: true,
+            //skipWaiting: true,
         }),
-
     ]
 }
