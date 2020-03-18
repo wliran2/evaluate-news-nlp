@@ -1,5 +1,5 @@
 function handleSubmit(event) {
-    //event.preventDefault()
+    event.preventDefault()
     const formText = document.getElementById('url').value;
     const errormessage = Client.checktheURL(formText)
     document.getElementById("err").innerHTML = '';
