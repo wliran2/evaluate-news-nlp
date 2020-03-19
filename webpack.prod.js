@@ -33,8 +33,8 @@ module.exports = {
             filename: './index.html',
         }),
         new WorkboxPlugin.GenerateSW({
-            // clientsClaim: true,
-            //skipWaiting: true,
+            clientsClaim: true,
+            skipWaiting: true,
         }),
     ]
 }

@@ -8,7 +8,7 @@ function handleSubmit(event) {
         return
     }
 
-    fetch('http://localhost:8080/checkurl', {
+    fetch('http://localhost:8081/checkurl', {
         method: 'POST',
         credentials: 'same-origin',
         headers: {
