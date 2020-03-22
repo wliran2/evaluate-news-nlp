@@ -3,7 +3,6 @@ const webpack = require('webpack')
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const WorkboxPlugin = require('workbox-webpack-plugin');
-config.entry.unshift("webpack-dev-server/client?http://localhost:8080/");
 
 module.exports = {
     entry: './src/client/index.js',
